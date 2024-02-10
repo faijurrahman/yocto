@@ -24,6 +24,7 @@ hob-image-*.bb
 !meta-yocto
 !meta-yocto-bsp
 !meta-yocto-imported
+!meta-raspberrypi
 !meta-extra
 /documentation/*/eclipse/
 /documentation/*/*.html
