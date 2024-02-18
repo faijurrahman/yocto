@@ -2,8 +2,11 @@
 *.pyo
 /*.patch
 /.repo/
-/build*/
-!/build/conf
+/build/bitbake-cookerdaemon.log
+/build/cache
+/build/downloads
+/build/sstate-cache
+/build/tmp
 pyshtables.py
 pstage/
 scripts/oe-git-proxy-socks
