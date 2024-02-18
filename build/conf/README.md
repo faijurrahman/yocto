@@ -10,7 +10,12 @@
 
 Build Command: bitbake rpi-test-image 
 
-Prepare SDCard: sudo dd if=./rpi-test-image-raspberrypi4-20240217194600.rootfs.wic of=/dev/sdf bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
+Prepare SDCard: 
+	cd ~/yocto/poky/build/tmp/deploy/images/raspberrypi4/
+	find -name "*wic.bz2"
+	untar core-image-sato-raspberrypi4-20240217215934.rootfs.wic.bz2 or rpi-test-image-raspberrypi4.tar.bz2
+		Extact the xxxx.wic.bz2 file and you will get xxxx.wic file
+	sudo dd if=./rpi-test-image-raspberrypi4-20240217194600.rootfs.wic of=/dev/sdf bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 
 GPIO App: raspi-gpio: https://github.com/RPi-Distro/raspi-gpio/blob/master/raspi-gpio.c#L803
 GPIO Driver: https://github.dev/eq-3/RaspberryMatic/blob/master/linux-4.1/drivers/char/broadcom/bcm2835-gpiomem.c
