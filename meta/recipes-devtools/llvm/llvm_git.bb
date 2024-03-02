@@ -23,6 +23,9 @@ PV = "13.0.1"
 
 MAJOR_VERSION = "${@oe.utils.trim_version("${PV}", 1)}"
 
+# To force the build to use specific number of jobs/threads in case the build machine has limited memory (8GB or less).
+# PARALLEL_MAKE = "-j 4"
+
 LLVM_RELEASE = "${PV}"
 LLVM_DIR = "llvm${LLVM_RELEASE}"
 
